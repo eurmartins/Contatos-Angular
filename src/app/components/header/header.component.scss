@@ -1,0 +1,59 @@
+
+.navbar {
+  background-color: #333333;
+  color: white;
+  padding: 15px 20px;
+}
+
+.navbar .navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: white !important;
+  padding: 10px 20px;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar .nav-link:hover {
+  color: #cccccc !important;
+}
+
+.navbar-nav {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .btn-outline-success {
+  border-color: white;
+  color: white;
+}
+
+.navbar .btn-outline-success:hover {
+  background-color: white;
+  color: #333333;
+}
+
+.dropdown-toggle:focus {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+}
+
+.dropdown-menu {
+  background-color: black !important;
+  color: white !important;
+}
+
+.dropdown-menu .nav-link:focus,
+.dropdown-menu .nav-link:hover {
+  background-color: #444444 !important;
+  color: white !important;
+}
