@@ -1,21 +1,22 @@
-
 .navbar {
   background-color: #333333;
   color: white;
-  padding: 15px 20px;
+  padding: 8px 20px;
+  border-radius: 10px;
+
 }
 
 .navbar .navbar-brand {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: white !important;
-  padding: 10px 20px;
+  padding: 8px 15px;
 }
 
 .navbar .nav-link {
   color: white !important;
-  font-size: 16px;
-  padding: 10px 15px;
+  font-size: 14px;
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -26,7 +27,7 @@
 }
 
 .navbar-nav {
-  gap: 15px;
+  gap: 12px;
   display: flex;
   align-items: center;
 }

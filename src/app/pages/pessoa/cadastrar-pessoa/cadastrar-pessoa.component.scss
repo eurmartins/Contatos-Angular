@@ -1,0 +1,44 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Cor inicial do botão */
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+button:hover {
+  background-color: #66b3ff; /* Cor mais clara do botão quando o mouse estiver sobre ele */
+}
+
+.container, .form-group label, .form-control, .btn {
+  color: white;
+}
+
+.container {
+  background-color: black;
+}
+
+.form-control {
+  background-color: #495057;
+}
