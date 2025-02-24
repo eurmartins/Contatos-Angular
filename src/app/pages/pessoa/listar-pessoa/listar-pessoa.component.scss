@@ -1,19 +1,15 @@
-div {
+.filtros {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-input {
+.filtros input {
   padding: 8px;
   width: 45%;
   border: 1px solid #ccc;
   border-radius: 4px;
-}
-
-.btn-aplicar:hover {
-  background-color: #007bff;
 }
 
 .btn-voltar {
@@ -29,32 +25,34 @@ input {
   background-color: #c82333;
 }
 
+.tabela-container {
+  max-height: 450px;
+  overflow: auto;
+  width: 100%;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.596);
+  background-color: rgba(255, 255, 255, 0.6);
   color: black;
   border-radius: 10px;
-  overflow: hidden;
 }
 
-thead {
+thead th {
+  position: sticky;
+  top: 0;
   background-color: #007bff;
   color: white;
-}
-
-thead tr:hover {
-  background-color: #007bff;
+  z-index: 2;
 }
 
 th, td {
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
-}
-
-th {
-  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 tr:hover {

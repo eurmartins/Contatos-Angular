@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Editar Pessoa</h2>
+
+  <div class="form-group">
+    <label>ID da Pessoa:</label>
+    <input type="number" [(ngModel)]="idBusca" placeholder="Digite o ID" class="input-field" />
+    <button class="btn" (click)="buscarPessoa()">Buscar</button>
+  </div>
+
+  <form [formGroup]="pessoaForm" class="form-container">
+    <div class="form-group">
+      <label>Nome:</label>
+      <input formControlName="nome" [readonly]="!isEditing" class="input-field" />
+    </div>
+
+    <div class="form-group">
+      <label>Endereço:</label>
+      <input formControlName="endereco" [readonly]="!isEditing" class="input-field" />
+    </div>
+
+    <div class="form-group">
+      <label>CEP:</label>
+      <input formControlName="cep" [readonly]="!isEditing" class="input-field" />
+    </div>
+
+    <div class="form-group">
+      <label>Cidade:</label>
+      <input formControlName="cidade" [readonly]="!isEditing" class="input-field" />
+    </div>
+
+    <div class="form-group">
+      <label>UF:</label>
+      <input formControlName="uf" [readonly]="!isEditing" class="input-field" />
+    </div>
+
+    <div class="buttons">
+      <button *ngIf="!isEditing" class="btn" (click)="enableEditing()">Editar</button>
+      <button *ngIf="isEditing" class="btn save" (click)="savePessoa()">Salvar</button>
+    </div>
+  </form>
+</div>

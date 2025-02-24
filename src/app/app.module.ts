@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { CadastrarPessoaComponent } from './pages/pessoa/cadastrar-pessoa/cadastrar-pessoa.component';
 import { ListarPessoaComponent } from './pages/pessoa/listar-pessoa/listar-pessoa.component';
 import { CardWelcomeComponent } from './components/card-welcome/card-welcome.component';
+import { EditarPessoaComponent } from './pages/pessoa/editar-pessoa/editar-pessoa.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +19,15 @@ import { CardWelcomeComponent } from './components/card-welcome/card-welcome.com
     HeaderComponent,
     CadastrarPessoaComponent,
     ListarPessoaComponent,
-    CardWelcomeComponent
+    CardWelcomeComponent,
+    EditarPessoaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

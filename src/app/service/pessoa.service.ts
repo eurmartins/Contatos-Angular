@@ -20,6 +20,13 @@ export class PessoaService {
     return this.http.get<IPessoa[]>(this.apiUrl + "/listar");
   }
 
+  procurarPorId(id: number): Observable<IPessoa> {
+    return this.http.get<IPessoa>(`${this.apiUrl}/procurarPorId/${id}`);
+  }
+
+  atualizarPessoa(id: number, pessoa: IPessoa): Observable<IPessoa> {
+    return this.http.put<IPessoa>(`${this.apiUrl}/atualizar/${id}`, pessoa);
+  }
   excluirPessoa(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/excluir/${id}`);
   }
