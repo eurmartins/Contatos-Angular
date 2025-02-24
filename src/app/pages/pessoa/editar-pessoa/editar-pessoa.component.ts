@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup} from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { PessoaService } from 'src/app/service/pessoa.service';
+import { PessoaService } from 'src/app/service/pessoaService/pessoa.service';
 import { IPessoa } from 'src/app/interfaces/ipessoa';
 import Swal from 'sweetalert2';
 

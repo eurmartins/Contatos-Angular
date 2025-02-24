@@ -27,7 +27,7 @@
         <td>{{ pessoa.uf }}</td>
         <td>
           <button class="btn-editar" (click)="editarPessoa(pessoa)">
-            <i class="fa-solid fa-user-pen"></i>
+            <a href="/editar-pessoa"><i class="fa-solid fa-user-pen"></i></a>
           </button>
           <button class="btn-excluir" (click)="excluirPessoa(pessoa.id)">
             <i class="fa-solid fa-trash-can"></i>

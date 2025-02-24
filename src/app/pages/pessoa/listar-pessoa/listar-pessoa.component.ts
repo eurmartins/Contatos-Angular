@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PessoaService } from 'src/app/service/pessoa.service';
+import { PessoaService } from 'src/app/service/pessoaService/pessoa.service';
 import { HttpClient } from '@angular/common/http';
 import { IPessoa } from 'src/app/interfaces/ipessoa';
 import Swal from 'sweetalert2';
@@ -42,7 +42,6 @@ export class ListarPessoaComponent implements OnInit {
 
   editarPessoa(pessoa: IPessoa): void {
     console.log("Editar pessoa:", pessoa);
-    // Aqui você pode implementar a lógica para abrir um formulário de edição, por exemplo.
   }
 
   excluirPessoa(id: number | undefined): void {

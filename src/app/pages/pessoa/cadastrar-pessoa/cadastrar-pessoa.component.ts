@@ -1,5 +1,6 @@
-import { PessoaService } from 'src/app/service/pessoa.service';
 import { Component, OnInit } from '@angular/core';
+import { CepService } from 'src/app/service/cep/cep.service';
+import { PessoaService } from 'src/app/service/pessoaService/pessoa.service';
 import { IPessoa } from 'src/app/interfaces/ipessoa';
 
 @Component({
@@ -17,11 +18,16 @@ export class CadastrarPessoaComponent implements OnInit {
     uf: ''
   };
 
-  constructor(private pessoaService: PessoaService) { }
+  carregando = false;
+
+  constructor(
+    private pessoaService: PessoaService,
+    private cepService: CepService
+  ) { }
 
   ngOnInit(): void {}
 
-  onSubmit(): void {  // Alterado de IPessoa para void
+  onSubmit(): void {
     this.pessoaService.criarPessoa(this.pessoa).subscribe({
       next: (response) => {
         console.log('Pessoa cadastrada:', response);
@@ -43,5 +49,28 @@ export class CadastrarPessoaComponent implements OnInit {
       cidade: '',
       uf: ''
     };
+  }
+
+  preencherEnderecoPorCep(): void {
+    if (this.pessoa.cep && this.pessoa.cep.length === 8) {
+      this.carregando = true;
+      this.cepService.buscarEndereco(this.pessoa.cep).subscribe({
+        next: (dados) => {
+          this.carregando = false;
+          if (dados && !dados.erro) {
+            this.pessoa.endereco = dados.logradouro;
+            this.pessoa.cidade = dados.localidade;
+            this.pessoa.uf = dados.uf;
+          } else {
+            alert('CEP não encontrado.');
+          }
+        },
+        error: (err) => {
+          this.carregando = false;
+          console.error('Erro ao buscar endereço:', err);
+          alert('Erro ao buscar endereço.');
+        }
+      });
+    }
   }
 }

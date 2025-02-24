@@ -21,14 +21,14 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #007bff; /* Cor inicial do botão */
+  background-color: #007bff;
   border: none;
   color: white;
-  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #66b3ff; /* Cor mais clara do botão quando o mouse estiver sobre ele */
+  background-color: #66b3ff;
 }
 
 .container, .form-group label, .form-control, .btn {
@@ -41,4 +41,15 @@ button:hover {
 
 .form-control {
   background-color: #495057;
+}
+
+.loading-spinner {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3em;
 }
