@@ -1,0 +1,27 @@
+<div>
+  <input type="text" [(ngModel)]="filtro" placeholder="Filtrar por nome">
+  <button class="btn-voltar" (click)="voltarPesquisa()">Voltar Pesquisa</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Endereço</th>
+      <th>CEP</th>
+      <th>Cidade</th>
+      <th>UF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pessoa of pessoasFiltradas">
+      <td>{{ pessoa.id }}</td>
+      <td>{{ pessoa.nome }}</td>
+      <td>{{ pessoa.endereco }}</td>
+      <td>{{ pessoa.cep }}</td>
+      <td>{{ pessoa.cidade }}</td>
+      <td>{{ pessoa.uf }}</td>
+    </tr>
+  </tbody>
+</table>

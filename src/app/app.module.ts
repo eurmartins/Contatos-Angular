@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { CadastrarPessoaComponent } from './pages/pessoa/cadastrar-pessoa/cadastrar-pessoa.component';
+import { ListarPessoaComponent } from './pages/pessoa/listar-pessoa/listar-pessoa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CadastrarPessoaComponent
+    CadastrarPessoaComponent,
+    ListarPessoaComponent
   ],
   imports: [
     BrowserModule,

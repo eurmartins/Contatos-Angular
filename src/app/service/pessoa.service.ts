@@ -14,4 +14,8 @@ export class PessoaService {
   criarPessoa(pessoa: any): Observable<any> {
     return this.http.post<any>(this.apiUrl + "/criar", pessoa);
   }
+
+  listarPessoas(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl + "/listar");
+  }
 }
