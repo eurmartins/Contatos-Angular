@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { IPessoa } from '../interfaces/ipessoa';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,15 @@ export class PessoaService {
 
   constructor(private http: HttpClient) { }
 
-  criarPessoa(pessoa: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl + "/criar", pessoa);
+  criarPessoa(pessoa: IPessoa): Observable<IPessoa> {
+    return this.http.post<IPessoa>(this.apiUrl + "/criar", pessoa);
   }
 
-  listarPessoas(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl + "/listar");
+  listarPessoas(): Observable<IPessoa[]> {
+    return this.http.get<IPessoa[]>(this.apiUrl + "/listar");
+  }
+
+  excluirPessoa(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/excluir/${id}`);
   }
 }

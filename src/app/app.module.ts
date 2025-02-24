@@ -8,13 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { CadastrarPessoaComponent } from './pages/pessoa/cadastrar-pessoa/cadastrar-pessoa.component';
 import { ListarPessoaComponent } from './pages/pessoa/listar-pessoa/listar-pessoa.component';
+import { CardWelcomeComponent } from './components/card-welcome/card-welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CadastrarPessoaComponent,
-    ListarPessoaComponent
+    ListarPessoaComponent,
+    CardWelcomeComponent
   ],
   imports: [
     BrowserModule,
