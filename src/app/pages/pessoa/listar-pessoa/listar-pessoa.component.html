@@ -1,7 +1,7 @@
 <div class="filtros">
-  <input type="text" [(ngModel)]="filtroNome" placeholder="Filtrar por nome">
-  <input type="text" [(ngModel)]="filtroId" placeholder="Filtrar por ID">
-  <button class="btn-voltar" (click)="voltarPesquisa()">Voltar Pesquisa</button>
+  <input type="text" [(ngModel)]="filtroNome" placeholder="🔍 Filtrar por nome">
+  <input type="text" [(ngModel)]="filtroId" placeholder="🔍 Filtrar por ID">
+  <button class="btn-voltar" (click)="voltarPesquisa()">🔙 Voltar Pesquisa</button>
 </div>
 
 <div class="tabela-container">
@@ -14,7 +14,7 @@
         <th>CEP</th>
         <th>Cidade</th>
         <th>UF</th>
-        <th>Funções</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -25,12 +25,12 @@
         <td>{{ pessoa.cep }}</td>
         <td>{{ pessoa.cidade }}</td>
         <td>{{ pessoa.uf }}</td>
-        <td>
+        <td class="acoes">
           <button class="btn-editar" (click)="editarPessoa(pessoa)">
-            <a href="/editar-pessoa"><i class="fa-solid fa-user-pen"></i></a>
+            <i class="fa-solid fa-pen"></i> Editar
           </button>
           <button class="btn-excluir" (click)="excluirPessoa(pessoa.id)">
-            <i class="fa-solid fa-trash-can"></i>
+            <i class="fa-solid fa-trash"></i> Excluir
           </button>
         </td>
       </tr>

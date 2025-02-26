@@ -1,41 +1,45 @@
-<div class="container">
+<div class="edicao-container">
   <h2>Editar Pessoa</h2>
 
   <div class="form-group">
-    <label>ID da Pessoa:</label>
-    <input type="number" [(ngModel)]="idBusca" placeholder="Digite o ID" class="input-field" />
-    <button class="btn" (click)="buscarPessoa()">Buscar</button>
+    <label for="idBusca">🔍 ID da Pessoa:</label>
+    <div class="input-group">
+      <input type="number" id="idBusca" [(ngModel)]="idBusca" placeholder="Digite o ID" class="input-field" />
+      <button class="btn buscar" (click)="buscarPessoa()">Buscar</button>
+    </div>
   </div>
 
   <form [formGroup]="pessoaForm" class="form-container">
     <div class="form-group">
-      <label>Nome:</label>
-      <input formControlName="nome" [readonly]="!isEditing" class="input-field" />
+      <label for="nome">👤 Nome:</label>
+      <input id="nome" formControlName="nome" [readonly]="!isEditing" class="input-field" placeholder="Nome da pessoa" />
     </div>
 
     <div class="form-group">
-      <label>Endereço:</label>
-      <input formControlName="endereco" [readonly]="!isEditing" class="input-field" />
+      <label for="endereco">🏠 Endereço:</label>
+      <input id="endereco" formControlName="endereco" [readonly]="!isEditing" class="input-field" placeholder="Endereço completo" />
     </div>
 
     <div class="form-group">
-      <label>CEP:</label>
-      <input formControlName="cep" [readonly]="!isEditing" class="input-field" />
+      <label for="cep">📍 CEP:</label>
+      <input id="cep" formControlName="cep" [readonly]="!isEditing" class="input-field" placeholder="Digite o CEP" />
     </div>
 
-    <div class="form-group">
-      <label>Cidade:</label>
-      <input formControlName="cidade" [readonly]="!isEditing" class="input-field" />
-    </div>
+    <div class="form-row">
+      <div class="form-group half-width">
+        <label for="cidade">🏙️ Cidade:</label>
+        <input id="cidade" formControlName="cidade" [readonly]="!isEditing" class="input-field" placeholder="Cidade" />
+      </div>
 
-    <div class="form-group">
-      <label>UF:</label>
-      <input formControlName="uf" [readonly]="!isEditing" class="input-field" />
+      <div class="form-group half-width">
+        <label for="uf">🌎 UF:</label>
+        <input id="uf" formControlName="uf" [readonly]="!isEditing" class="input-field" placeholder="UF" />
+      </div>
     </div>
 
     <div class="buttons">
-      <button *ngIf="!isEditing" class="btn" (click)="enableEditing()">Editar</button>
-      <button *ngIf="isEditing" class="btn save" (click)="savePessoa()">Salvar</button>
+      <button *ngIf="!isEditing" class="btn editar" (click)="enableEditing()">✏️ Editar</button>
+      <button *ngIf="isEditing" class="btn salvar" (click)="savePessoa()">💾 Salvar</button>
     </div>
   </form>
 </div>

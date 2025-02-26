@@ -19,7 +19,8 @@ export class EditarPessoaComponent{
 
   constructor(
     private fb: FormBuilder,
-    private pessoaService: PessoaService
+    private pessoaService: PessoaService,
+    private route : ActivatedRoute
   ) {
     this.pessoaForm = this.fb.group({
       nome: [''],
@@ -27,6 +28,15 @@ export class EditarPessoaComponent{
       cep: [''],
       cidade: [''],
       uf: ['']
+    });
+  }
+
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.idBusca = + params['id'];
+      if (this.idBusca) {
+        this.buscarPessoa();
+      }
     });
   }
 

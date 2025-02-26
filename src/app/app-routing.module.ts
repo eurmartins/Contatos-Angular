@@ -12,7 +12,10 @@ const routes: Routes = [
     path: 'listar-pessoa', component : ListarPessoaComponent
   },
   {
-    path: 'editar-pessoa', component : EditarPessoaComponent
+    path: 'editar-pessoa/:id', component : EditarPessoaComponent
+  },
+  {
+    path : 'editar-pessoa', component : EditarPessoaComponent
   }
 ];
 

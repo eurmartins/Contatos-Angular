@@ -3,6 +3,7 @@ import { PessoaService } from 'src/app/service/pessoaService/pessoa.service';
 import { HttpClient } from '@angular/common/http';
 import { IPessoa } from 'src/app/interfaces/ipessoa';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-pessoa',
@@ -15,7 +16,7 @@ export class ListarPessoaComponent implements OnInit {
   filtroNome: string = '';
   filtroId: string = '';
 
-  constructor(private pessoaService: PessoaService) {}
+  constructor(private pessoaService: PessoaService, private router : Router) {}
 
   ngOnInit(): void {
     this.carregarPessoas();
@@ -41,7 +42,7 @@ export class ListarPessoaComponent implements OnInit {
   }
 
   editarPessoa(pessoa: IPessoa): void {
-    console.log("Editar pessoa:", pessoa);
+    this.router.navigate(['/editar-pessoa', pessoa.id]);
   }
 
   excluirPessoa(id: number | undefined): void {

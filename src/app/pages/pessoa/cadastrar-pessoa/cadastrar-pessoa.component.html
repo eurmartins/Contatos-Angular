@@ -1,33 +1,36 @@
-<div class="container">
+<div class="cadastro-container">
   <h2>Cadastro de Pessoa</h2>
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="nome">Nome</label>
-      <input type="text" id="nome" class="form-control" [(ngModel)]="pessoa.nome" name="nome" required>
-    </div>
-    <div class="form-group">
-      <label for="cep">CEP</label>
-      <input type="text" id="cep" class="form-control" [(ngModel)]="pessoa.cep" name="cep" (keyup)="preencherEnderecoPorCep()">
+      <label for="nome">👤 Nome</label>
+      <input type="text" id="nome" class="form-control" [(ngModel)]="pessoa.nome" name="nome" required placeholder="Digite seu nome">
     </div>
 
-    <div *ngIf="carregando" class="loading-spinner">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Carregando...</span>
+    <div class="form-group">
+      <label for="cep">📍 CEP</label>
+      <input type="text" id="cep" class="form-control" [(ngModel)]="pessoa.cep" name="cep" (keyup)="preencherEnderecoPorCep()" placeholder="Digite seu CEP">
+      <div *ngIf="carregando" class="loading-spinner">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Carregando...</span>
+        </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="endereco">Endereço</label>
-      <input type="text" id="endereco" class="form-control" [(ngModel)]="pessoa.endereco" name="endereco">
+      <label for="endereco">🏠 Endereço</label>
+      <input type="text" id="endereco" class="form-control" [(ngModel)]="pessoa.endereco" name="endereco" placeholder="Endereço automático pelo CEP">
     </div>
-    <div class="form-group">
-      <label for="cidade">Cidade</label>
-      <input type="text" id="cidade" class="form-control" [(ngModel)]="pessoa.cidade" name="cidade">
+
+    <div class="form-row">
+      <div class="form-group half-width">
+        <label for="cidade">🏙️ Cidade</label>
+        <input type="text" id="cidade" class="form-control" [(ngModel)]="pessoa.cidade" name="cidade" placeholder="Cidade">
+      </div>
+      <div class="form-group half-width">
+        <label for="uf">🌎 UF</label>
+        <input type="text" id="uf" class="form-control" [(ngModel)]="pessoa.uf" name="uf" placeholder="UF">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="uf">UF</label>
-      <input type="text" id="uf" class="form-control" [(ngModel)]="pessoa.uf" name="uf">
-    </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
+
+    <button type="submit" class="btn-salvar">💾 Salvar</button>
   </form>
-</div>

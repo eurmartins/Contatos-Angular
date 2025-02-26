@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CepService } from 'src/app/service/cep/cep.service';
 import { PessoaService } from 'src/app/service/pessoaService/pessoa.service';
 import { IPessoa } from 'src/app/interfaces/ipessoa';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastrar-pessoa',
@@ -31,12 +32,20 @@ export class CadastrarPessoaComponent implements OnInit {
     this.pessoaService.criarPessoa(this.pessoa).subscribe({
       next: (response) => {
         console.log('Pessoa cadastrada:', response);
-        alert('Pessoa cadastrada com sucesso!');
+        Swal.fire({
+          icon: 'success',
+          title: 'Sucesso!',
+          text: 'Pessoa cadastrada com sucesso!',
+        });
         this.limparFormulario();
       },
       error: (err) => {
         console.error('Erro ao cadastrar pessoa:', err);
-        alert('Erro ao cadastrar pessoa: ' + err.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro!',
+          text: 'Erro ao cadastrar pessoa! Tente novamente! ',
+        });
       }
     });
   }
@@ -62,13 +71,21 @@ export class CadastrarPessoaComponent implements OnInit {
             this.pessoa.cidade = dados.localidade;
             this.pessoa.uf = dados.uf;
           } else {
-            alert('CEP não encontrado.');
+            Swal.fire({
+              icon: 'warning',
+              title: 'Atenção!',
+              text: 'CEP não encontrado. Tente novamente!',
+            });
           }
         },
         error: (err) => {
           this.carregando = false;
           console.error('Erro ao buscar endereço:', err);
-          alert('Erro ao buscar endereço.');
+          Swal.fire({
+            icon: 'error',
+            title: 'Erro!',
+            text: 'Erro ao buscar endereço.',
+          });
         }
       });
     }

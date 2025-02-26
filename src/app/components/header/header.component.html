@@ -1,49 +1,32 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Minsait Contatos</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <a class="navbar-brand" href="#">🏦 Minsait Contatos</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home <i class="fa-solid fa-house"></i></a>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            👥 Pessoas
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/cadastrar-pessoa">📝 Cadastrar</a></li>
+            <li><a class="dropdown-item" href="/editar-pessoa">✏️ Editar</a></li>
+            <li><a class="dropdown-item" href="/listar-pessoa">📋 Listar</a></li>
+          </ul>
         </li>
-        <li class="nav-item ms-3">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Pessoas <i class="fa-solid fa-person"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li class="nav-item">
-                <a class="nav-link" href="/cadastrar-pessoa">Cadastrar <i class="fa-solid fa-address-card"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/editar-pessoa">Editar <i class="fa-solid fa-pen-to-square"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/listar-pessoa">Listar <i class="fa-solid fa-list-check"></i></a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item ms-auto">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Contatos <i class="fa-solid fa-phone"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cadastrar <i class="fa-solid fa-address-card"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Editar <i class="fa-solid fa-pen-to-square"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Listar <i class="fa-solid fa-list-check"></i></a>
-              </li>
-            </ul>
-          </div>
+        <li class="nav-item dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ☎️ Contatos
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">📝 Cadastrar</a></li>
+            <li><a class="dropdown-item" href="#">✏️ Editar</a></li>
+            <li><a class="dropdown-item" href="#">📋 Listar</a></li>
+          </ul>
         </li>
       </ul>
     </div>
