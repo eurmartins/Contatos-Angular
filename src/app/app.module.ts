@@ -11,6 +11,7 @@ import { ListarPessoaComponent } from './pages/pessoa/listar-pessoa/listar-pesso
 import { CardWelcomeComponent } from './components/card-welcome/card-welcome.component';
 import { EditarPessoaComponent } from './pages/pessoa/editar-pessoa/editar-pessoa.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CadastrarContatoComponent } from './pages/contato/cadastrar-contato/cadastrar-contato.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CadastrarPessoaComponent,
     ListarPessoaComponent,
     CardWelcomeComponent,
-    EditarPessoaComponent
+    EditarPessoaComponent,
+    CadastrarContatoComponent
   ],
   imports: [
     BrowserModule,

@@ -67,7 +67,7 @@ export class EditarPessoaComponent{
         Swal.fire({
           icon: 'error',
           title: 'Erro!',
-          text: 'Não foi possível buscar a pessoa. Verifique o ID ou tente novamente mais tarde.',
+          text: 'Não foi possível buscar o ID. Verifique o valor inserido ou tente novamente mais tarde.',
         });
       }
     });
@@ -76,7 +76,7 @@ export class EditarPessoaComponent{
   enableEditing(): void {
     this.isEditing = true;
   }
-  savePessoa(): void {
+  attPessoa(): void {
     this.pessoaService.atualizarPessoa(this.idBusca, this.pessoaForm.value).subscribe(() => {
       this.isEditing = false;
       Swal.fire({

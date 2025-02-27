@@ -29,6 +29,16 @@ export class CadastrarPessoaComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
+    if (!this.pessoa.nome.trim()) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Atenção!',
+        text: 'O campo Nome é obrigatório!',
+      });
+      return;
+    }
+
+
     this.pessoaService.criarPessoa(this.pessoa).subscribe({
       next: (response) => {
         console.log('Pessoa cadastrada:', response);
@@ -44,20 +54,10 @@ export class CadastrarPessoaComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Erro!',
-          text: 'Erro ao cadastrar pessoa! Tente novamente! ',
+          text: 'Erro ao cadastrar pessoa! Tente novamente!',
         });
       }
     });
-  }
-
-  limparFormulario(): void {
-    this.pessoa = {
-      nome: '',
-      endereco: '',
-      cep: '',
-      cidade: '',
-      uf: ''
-    };
   }
 
   preencherEnderecoPorCep(): void {
@@ -90,4 +90,15 @@ export class CadastrarPessoaComponent implements OnInit {
       });
     }
   }
+
+  limparFormulario(): void {
+    this.pessoa = {
+      nome: '',
+      endereco: '',
+      cep: '',
+      cidade: '',
+      uf: ''
+    };
+  }
+
 }

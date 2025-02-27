@@ -55,14 +55,14 @@ export class ListarPessoaComponent implements OnInit {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Sim, excluir!",
-      cancelButtonText: "Cancelar"
+      confirmButtonText: "Excluir!",
+      cancelButtonText: "Cancelar."
     }).then((result) => {
       if (result.isConfirmed) {
         this.pessoaService.excluirPessoa(id).subscribe({
           next: () => {
             Swal.fire("Excluído!", "A pessoa foi excluída com sucesso.", "success");
-            this.carregarPessoas(); // Atualiza a lista
+            this.carregarPessoas();
           },
           error: (err) => {
             Swal.fire("Erro!", "Erro ao excluir pessoa: " + err.message, "error");

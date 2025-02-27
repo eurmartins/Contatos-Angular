@@ -33,13 +33,13 @@
 
       <div class="form-group half-width">
         <label for="uf">🌎 UF:</label>
-        <input id="uf" formControlName="uf" [readonly]="!isEditing" class="input-field" placeholder="UF" />
+        <input id="uf" formControlName="uf" [readonly]="!isEditing" class="input-field" placeholder="UF" maxlength="2" />
       </div>
     </div>
 
     <div class="buttons">
       <button *ngIf="!isEditing" class="btn editar" (click)="enableEditing()">✏️ Editar</button>
-      <button *ngIf="isEditing" class="btn salvar" (click)="savePessoa()">💾 Salvar</button>
+      <button *ngIf="isEditing" class="btn salvar" (click)="attPessoa()">💾 Salvar</button>
     </div>
   </form>
 </div>

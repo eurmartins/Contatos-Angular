@@ -1,0 +1,48 @@
+<div class="cadastro-container">
+  <h2>Cadastro de Contato</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="tipoContato">📞 Tipo de Contato</label>
+      <select id="tipoContato" class="form-control" [(ngModel)]="contato.tipoContato" name="tipoContato" required>
+        <option *ngFor="let opcao of tipoContatoOpcoes" [value]="opcao.value">
+          {{ opcao.key }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="contato">✉️ Contato</label>
+      <input
+        type="text"
+        id="contato"
+        class="form-control"
+        [(ngModel)]="contato.contato"
+        name="contato"
+        required
+        placeholder="Digite o contato"
+        #contatoInput="ngModel">
+      <div *ngIf="contatoInput.invalid && contatoInput.touched" class="error-message">
+        Campo obrigatório, insira o contato!
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="pessoaId">🆔 ID da Pessoa</label>
+      <input
+        type="number"
+        id="pessoaId"
+        class="form-control"
+        [(ngModel)]="contato.pessoaId"
+        name="pessoaId"
+        required
+        placeholder="Informe o ID da pessoa"
+        #pessoaIdInput="ngModel">
+      <div *ngIf="pessoaIdInput.invalid && pessoaIdInput.touched" class="error-message">
+        Campo obrigatório, insira o ID da pessoa!
+      </div>
+    </div>
+
+    <button type="submit" class="btn-salvar">💾 Salvar</button>
+  </form>
+</div>
