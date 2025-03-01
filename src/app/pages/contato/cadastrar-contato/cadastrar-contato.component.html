@@ -21,10 +21,14 @@
         name="contato"
         required
         placeholder="Digite o contato"
-        #contatoInput="ngModel">
+        #contatoInput="ngModel"
+        minlength="9"
+        maxlength="14">
+
       <div *ngIf="contatoInput.invalid && contatoInput.touched" class="error-message">
-        Campo obrigatório, insira o contato!
+        Campo obrigatório, insira o contato! De 9 à 14 números.
       </div>
+
     </div>
 
     <div class="form-group">

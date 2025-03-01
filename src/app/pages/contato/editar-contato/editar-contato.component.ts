@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
   templateUrl: './editar-contato.component.html',
   styleUrls: ['./editar-contato.component.scss']
 })
+
 export class EditarContatoComponent implements OnInit {
 
   contatoForm: FormGroup;

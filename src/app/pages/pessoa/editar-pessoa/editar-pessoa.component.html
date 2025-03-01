@@ -4,7 +4,12 @@
   <div class="form-group">
     <label for="idBusca">🔍 ID da Pessoa:</label>
     <div class="input-group">
-      <input type="number" id="idBusca" [(ngModel)]="idBusca" placeholder="Digite o ID" class="input-field" />
+      <input
+      type="number"
+      id="idBusca"
+      [(ngModel)]="idBusca"
+      placeholder="Digite o ID"
+      class="input-field" />
       <button class="btn buscar" (click)="buscarPessoa()">Buscar</button>
     </div>
   </div>
@@ -12,28 +17,57 @@
   <form [formGroup]="pessoaForm" class="form-container">
     <div class="form-group">
       <label for="nome">👤 Nome:</label>
-      <input id="nome" formControlName="nome" [readonly]="!isEditing" class="input-field" placeholder="Nome da pessoa" />
+      <input
+      id="nome"
+      formControlName="nome"
+      [readonly]="!isEditing"
+      class="input-field"
+      placeholder="Nome da pessoa" />
     </div>
 
     <div class="form-group">
       <label for="endereco">🏠 Endereço:</label>
-      <input id="endereco" formControlName="endereco" [readonly]="!isEditing" class="input-field" placeholder="Endereço completo" />
+      <input
+      id="endereco"
+      formControlName="endereco"
+      [readonly]="!isEditing"
+      class="input-field"
+      placeholder="Endereço completo" />
     </div>
 
     <div class="form-group">
       <label for="cep">📍 CEP:</label>
-      <input id="cep" formControlName="cep" [readonly]="!isEditing" class="input-field" placeholder="Digite o CEP" />
+      <input
+      id="cep"
+      formControlName="cep"
+      [readonly]="!isEditing"
+      class="input-field"
+      placeholder="Digite o CEP" />
     </div>
 
     <div class="form-row">
       <div class="form-group half-width">
         <label for="cidade">🏙️ Cidade:</label>
-        <input id="cidade" formControlName="cidade" [readonly]="!isEditing" class="input-field" placeholder="Cidade" />
+        <input
+        id="cidade"
+        formControlName="cidade"
+        [readonly]="!isEditing"
+        class="input-field"
+        placeholder="Cidade" />
       </div>
 
       <div class="form-group half-width">
         <label for="uf">🌎 UF:</label>
-        <input id="uf" formControlName="uf" [readonly]="!isEditing" class="input-field" placeholder="UF" maxlength="2" />
+        <input
+        id="uf"
+        formControlName="uf"
+        [readonly]="!isEditing"
+        class="input-field"
+        placeholder="UF"
+        maxlength="2"
+        (input)="pessoaForm.controls['uf']
+        .setValue(pessoaForm.controls['uf']
+        .value.toUpperCase())" />
       </div>
     </div>
 

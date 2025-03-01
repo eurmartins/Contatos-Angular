@@ -20,7 +20,16 @@
 
     <div class="form-group">
       <label for="cep">📍 CEP</label>
-      <input type="text" id="cep" class="form-control" [(ngModel)]="pessoa.cep" name="cep" (keyup)="preencherEnderecoPorCep()" placeholder="Digite seu CEP">
+      <input
+      type="text"
+      id="cep"
+      class="form-control"
+      [(ngModel)]="pessoa.cep"
+      name="cep"
+      (keyup)="preencherEnderecoPorCep()"
+      placeholder="Digite seu CEP"
+      minlength="8"
+      maxlength="8">
       <div *ngIf="carregando" class="loading-spinner">
         <div class="spinner-border" role="status">
           <span class="sr-only">Carregando...</span>
@@ -30,13 +39,25 @@
 
     <div class="form-group">
       <label for="endereco">🏠 Endereço</label>
-      <input type="text" id="endereco" class="form-control" [(ngModel)]="pessoa.endereco" name="endereco" placeholder="Endereço automático pelo CEP">
+      <input
+      type="text"
+      id="endereco"
+      class="form-control"
+      [(ngModel)]="pessoa.endereco"
+      name="endereco"
+      placeholder="Endereço automático pelo CEP">
     </div>
 
     <div class="form-row">
       <div class="form-group half-width">
         <label for="cidade">🏙️ Cidade</label>
-        <input type="text" id="cidade" class="form-control" [(ngModel)]="pessoa.cidade" name="cidade" placeholder="Cidade">
+        <input
+        type="text"
+        id="cidade"
+        class="form-control"
+        [(ngModel)]="pessoa.cidade"
+        name="cidade"
+        placeholder="Cidade">
       </div>
       <div class="form-group half-width">
         <label for="uf">🌎 UF</label>
@@ -49,7 +70,8 @@
           maxlength="2"
           placeholder="UF"
           #ufInput="ngModel"
-          required>
+          required
+          (input)="pessoa.uf = pessoa.uf?.toUpperCase()">
 
         <div *ngIf="ufInput.invalid && ufInput.touched" class="error-message">
           Maximo 2 letras, EX: "SP"

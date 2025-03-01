@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './listar-pessoa.component.html',
   styleUrls: ['./listar-pessoa.component.scss']
 })
+
 export class ListarPessoaComponent implements OnInit {
 
   pessoas: IPessoa[] = [];
@@ -21,7 +22,6 @@ export class ListarPessoaComponent implements OnInit {
   ngOnInit(): void {
     this.carregarPessoas();
   }
-
   carregarPessoas(): void {
     this.pessoaService.listarPessoas().subscribe(data => {
       this.pessoas = data;

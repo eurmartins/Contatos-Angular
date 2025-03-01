@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   templateUrl: './cadastrar-contato.component.html',
   styleUrls: ['./cadastrar-contato.component.scss']
 })
+
 export class CadastrarContatoComponent {
 
   contato: IContato = {

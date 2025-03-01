@@ -48,7 +48,6 @@ export class ContatoServiceService {
     );
   }
 
-
   excluirContato(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/excluir/${id}`);
   }

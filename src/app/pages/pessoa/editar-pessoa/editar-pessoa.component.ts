@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   templateUrl: './editar-pessoa.component.html',
   styleUrls: ['./editar-pessoa.component.scss']
 })
+
 export class EditarPessoaComponent {
 
   pessoaForm: FormGroup;
@@ -32,7 +33,7 @@ export class EditarPessoaComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.idBusca = + params['id'];
+      this.idBusca = +params['id'];
       if (this.idBusca) {
         this.buscarPessoa();
       }

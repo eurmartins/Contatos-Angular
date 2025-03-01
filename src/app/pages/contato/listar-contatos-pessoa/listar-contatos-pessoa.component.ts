@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './listar-contatos-pessoa.component.html',
   styleUrls: ['./listar-contatos-pessoa.component.scss']
 })
+
 export class ListarContatosPessoaComponent {
   pessoaId: number = 0;
   contatos: IContato[] = [];

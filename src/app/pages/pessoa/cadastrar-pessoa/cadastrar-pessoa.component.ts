@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   templateUrl: './cadastrar-pessoa.component.html',
   styleUrls: ['./cadastrar-pessoa.component.scss']
 })
+
 export class CadastrarPessoaComponent implements OnInit {
 
   pessoa: IPessoa = {
@@ -38,6 +39,10 @@ export class CadastrarPessoaComponent implements OnInit {
         background: '#333'
       });
       return;
+    }
+
+    if (this.pessoa.uf) {
+      this.pessoa.uf = this.pessoa.uf.toUpperCase();
     }
 
     this.pessoaService.criarPessoa(this.pessoa).subscribe({
