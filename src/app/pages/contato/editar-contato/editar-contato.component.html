@@ -1,0 +1,36 @@
+<div class="edicao-container">
+  <h2>Editar Contato</h2>
+
+  <div class="form-group">
+    <label for="idBusca">🔍 ID do Contato:</label>
+    <div class="input-group">
+      <input type="number" id="idBusca" [(ngModel)]="idBusca" placeholder="Digite o ID do contato" class="input-field" />
+      <button class="btn buscar" (click)="buscarContato()">Buscar</button>
+    </div>
+  </div>
+
+  <form [formGroup]="contatoForm" class="form-container">
+    <div class="form-group">
+      <label for="tipoContato">📞 Tipo de Contato:</label>
+      <select id="tipoContato" formControlName="tipoContato" [disabled]="!isEditing" class="input-field">
+        <option [ngValue]="0">Telefone</option>
+        <option [ngValue]="1">Celular</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="contato">📱 Contato:</label>
+      <input id="contato" formControlName="contato" [disabled]="!isEditing" class="input-field" placeholder="Digite o número de contato" />
+    </div>
+
+    <div class="form-group">
+      <label for="pessoaId">🧑‍🤝‍🧑 Pessoa:</label>
+      <input id="pessoaId" formControlName="pessoaId" readonly class="input-field" placeholder="ID da pessoa vinculada"/>
+    </div>
+
+    <div class="buttons">
+      <button *ngIf="!isEditing" class="btn editar" (click)="enableEditing()">✏️ Editar</button>
+      <button *ngIf="isEditing" class="btn salvar" (click)="attContato()">💾 Salvar</button>
+    </div>
+  </form>
+</div>

@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class CadastrarContatoComponent {
 
   contato: IContato = {
+    id: 0,
     tipoContato: TipoContato.CELULAR,
     contato: '',
     pessoaId: 0
@@ -31,6 +32,8 @@ export class CadastrarContatoComponent {
           icon: 'success',
           title: 'Contato cadastrado!',
           text: 'O contato foi cadastrado com sucesso.',
+          background: '#333',
+          color: '#fff',
           confirmButtonText: 'OK'
         });
         this.limparFormulario();
@@ -40,6 +43,8 @@ export class CadastrarContatoComponent {
           icon: 'error',
           title: 'Erro ao cadastrar!',
           text: 'Ocorreu um erro ao tentar cadastrar o contato.',
+          background: '#333',
+          color: '#fff',
           confirmButtonText: 'Tentar novamente'
         });
         console.error('Erro:', err);
@@ -49,6 +54,7 @@ export class CadastrarContatoComponent {
 
   limparFormulario() {
     this.contato = {
+      id: 0,
       tipoContato: TipoContato.TELEFONE,
       contato: '',
       pessoaId: 0

@@ -5,13 +5,12 @@ import { PessoaService } from 'src/app/service/pessoaService/pessoa.service';
 import { IPessoa } from 'src/app/interfaces/ipessoa';
 import Swal from 'sweetalert2';
 
-
 @Component({
   selector: 'app-editar-pessoa',
   templateUrl: './editar-pessoa.component.html',
   styleUrls: ['./editar-pessoa.component.scss']
 })
-export class EditarPessoaComponent{
+export class EditarPessoaComponent {
 
   pessoaForm: FormGroup;
   isEditing = false;
@@ -46,6 +45,8 @@ export class EditarPessoaComponent{
         icon: 'warning',
         title: 'Atenção!',
         text: 'Digite um ID válido!',
+        background: '#333',
+        color: '#fff'
       });
       return;
     }
@@ -60,6 +61,8 @@ export class EditarPessoaComponent{
             icon: 'error',
             title: 'Erro!',
             text: 'Pessoa não encontrada!',
+            background: '#333',
+            color: '#fff'
           });
         }
       },
@@ -68,6 +71,8 @@ export class EditarPessoaComponent{
           icon: 'error',
           title: 'Erro!',
           text: 'Não foi possível buscar o ID. Verifique o valor inserido ou tente novamente mais tarde.',
+          background: '#333',
+          color: '#fff'
         });
       }
     });
@@ -76,6 +81,7 @@ export class EditarPessoaComponent{
   enableEditing(): void {
     this.isEditing = true;
   }
+
   attPessoa(): void {
     this.pessoaService.atualizarPessoa(this.idBusca, this.pessoaForm.value).subscribe(() => {
       this.isEditing = false;
@@ -83,10 +89,10 @@ export class EditarPessoaComponent{
         icon: 'success',
         title: 'Sucesso!',
         text: 'Pessoa atualizada com sucesso!',
-        confirmButtonColor: '#3085d6',
+        background: '#333',
+        color: '#fff',
+        confirmButtonColor: '#3085d6'
       });
     });
   }
 }
-
-

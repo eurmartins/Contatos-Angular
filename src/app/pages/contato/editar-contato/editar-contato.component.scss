@@ -1,4 +1,4 @@
-.cadastro-container {
+.edicao-container {
   max-width: 500px;
   margin: 20px auto;
   padding: 20px;
@@ -26,8 +26,7 @@ label {
   color: #f8f9fa;
 }
 
-input,
-select {
+.input-field {
   width: 100%;
   padding: 10px;
   border: 1px solid #555;
@@ -37,16 +36,35 @@ select {
   color: white;
 }
 
-input::placeholder,
-select::placeholder {
+.input-field::placeholder {
   color: #bbb;
 }
 
-input:focus,
-select:focus {
+.input-field:focus {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group .input-field {
+  flex: 1;
+}
+
+.btn.buscar {
+  background: #17a2b8;
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.btn.buscar:hover {
+  background: #138496;
 }
 
 .form-row {
@@ -59,45 +77,35 @@ select:focus {
   width: 48%;
 }
 
-.btn-salvar {
-  width: 100%;
-  padding: 12px;
-  background: #007bff;
-  border: none;
-  color: white;
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 12px 15px;
   font-size: 16px;
-  font-weight: bold;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  width: 48%;
 }
 
-.btn-salvar:hover {
-  background: #0056b3;
+.btn:hover {
+  opacity: 0.8;
 }
 
-.error-message {
-  color: #fff;
-  font-size: 12px;
+.btn.editar {
+  background: #ffc107;
+  color: black;
 }
 
-.mensagem {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #28a745;
+.btn.salvar {
+  background: #28a745;
   color: white;
-  border-radius: 6px;
-}
-
-.loading-spinner {
-  text-align: center;
-  margin-top: 5px;
-}
-
-.spinner-border {
-  width: 2rem;
-  height: 2rem;
-  border-width: 0.2em;
 }
 
 @media (max-width: 600px) {
@@ -106,6 +114,14 @@ select:focus {
   }
 
   .half-width {
+    width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
     width: 100%;
   }
 }

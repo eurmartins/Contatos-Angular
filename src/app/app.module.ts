@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import Swal from 'sweetalert2';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,17 +13,22 @@ import { CardWelcomeComponent } from './components/card-welcome/card-welcome.com
 import { EditarPessoaComponent } from './pages/pessoa/editar-pessoa/editar-pessoa.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CadastrarContatoComponent } from './pages/contato/cadastrar-contato/cadastrar-contato.component';
+import { EditarContatoComponent } from './pages/contato/editar-contato/editar-contato.component';
+import { ListarContatosPessoaComponent } from './pages/contato/listar-contatos-pessoa/listar-contatos-pessoa.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CadastrarPessoaComponent,
-    ListarPessoaComponent,
     CardWelcomeComponent,
+    CadastrarPessoaComponent,
     EditarPessoaComponent,
-    CadastrarContatoComponent
+    ListarPessoaComponent,
+    CadastrarContatoComponent,
+    EditarContatoComponent,
+    ListarContatosPessoaComponent
   ],
   imports: [
     BrowserModule,

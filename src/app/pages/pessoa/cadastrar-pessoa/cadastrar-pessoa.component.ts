@@ -34,10 +34,11 @@ export class CadastrarPessoaComponent implements OnInit {
         icon: 'warning',
         title: 'Atenção!',
         text: 'O campo Nome é obrigatório!',
+        color: '#fff',
+        background: '#333'
       });
       return;
     }
-
 
     this.pessoaService.criarPessoa(this.pessoa).subscribe({
       next: (response) => {
@@ -46,6 +47,8 @@ export class CadastrarPessoaComponent implements OnInit {
           icon: 'success',
           title: 'Sucesso!',
           text: 'Pessoa cadastrada com sucesso!',
+          background: '#333',
+          color: '#fff'
         });
         this.limparFormulario();
       },
@@ -55,6 +58,8 @@ export class CadastrarPessoaComponent implements OnInit {
           icon: 'error',
           title: 'Erro!',
           text: 'Erro ao cadastrar pessoa! Tente novamente!',
+          background: '#333',
+          color: '#fff'
         });
       }
     });
@@ -75,6 +80,8 @@ export class CadastrarPessoaComponent implements OnInit {
               icon: 'warning',
               title: 'Atenção!',
               text: 'CEP não encontrado. Tente novamente!',
+              background: '#333',
+              color: '#fff'
             });
           }
         },
@@ -85,6 +92,8 @@ export class CadastrarPessoaComponent implements OnInit {
             icon: 'error',
             title: 'Erro!',
             text: 'Erro ao buscar endereço.',
+            background: '#333',
+            color: '#fff'
           });
         }
       });

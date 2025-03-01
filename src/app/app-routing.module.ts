@@ -4,6 +4,9 @@ import { CadastrarPessoaComponent } from './pages/pessoa/cadastrar-pessoa/cadast
 import { ListarPessoaComponent } from './pages/pessoa/listar-pessoa/listar-pessoa.component';
 import { EditarPessoaComponent } from './pages/pessoa/editar-pessoa/editar-pessoa.component';
 import { CadastrarContatoComponent } from './pages/contato/cadastrar-contato/cadastrar-contato.component';
+import Swal from 'sweetalert2';
+import { EditarContatoComponent } from './pages/contato/editar-contato/editar-contato.component';
+import { ListarContatosPessoaComponent } from './pages/contato/listar-contatos-pessoa/listar-contatos-pessoa.component';
 
 const routes: Routes = [
   {
@@ -20,8 +23,16 @@ const routes: Routes = [
   },
   {
     path : 'cadastrar-contato', component : CadastrarContatoComponent
+  },
+  {
+    path : 'editar-contato', component : EditarContatoComponent
+  },
+  {
+    path: 'editar-contato/:id', component: EditarContatoComponent
+  },
+  {
+    path : 'listar-contatos-pessoa', component : ListarContatosPessoaComponent
   }
-
 ];
 
 @NgModule({

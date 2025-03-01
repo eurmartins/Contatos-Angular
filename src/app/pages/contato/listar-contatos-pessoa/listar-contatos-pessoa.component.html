@@ -1,0 +1,34 @@
+<div class="filtros">
+  <input type="number" [(ngModel)]="pessoaId" placeholder="🔍 Digite o ID da pessoa">
+  <button class="btn-voltar" (click)="buscarContatos()">🔍 Buscar</button>
+</div>
+
+<p *ngIf="mensagemErro" class="erro">{{ mensagemErro }}</p>
+
+<div class="tabela-container" *ngIf="contatos.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tipo de Contato</th>
+        <th>Contato</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contato of contatos">
+        <td>{{ contato.pessoaId }}</td>
+        <td>{{ contato.tipoContato }}</td>
+        <td>{{ contato.contato }}</td>
+        <td class="acoes">
+          <button class="btn-editar" (click)="editarContato(contato)">
+            <i class="fa-solid fa-pen"></i> Editar
+          </button>
+          <button class="btn-excluir" (click)="excluirContato(contato.id)">
+            <i class="fa-solid fa-trash"></i> Excluir ({{ contato.id }})
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

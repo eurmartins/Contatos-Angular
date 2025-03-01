@@ -28,7 +28,6 @@ export class ListarPessoaComponent implements OnInit {
     });
   }
 
-
   get pessoasFiltradas(): IPessoa[] {
     return this.pessoas.filter(pessoa =>
       (this.filtroNome ? pessoa.nome.toLowerCase().includes(this.filtroNome.toLowerCase()) : true) &&
@@ -55,17 +54,31 @@ export class ListarPessoaComponent implements OnInit {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
+      background: '#333',
+      color: '#fff',
       confirmButtonText: "Excluir!",
       cancelButtonText: "Cancelar."
     }).then((result) => {
       if (result.isConfirmed) {
         this.pessoaService.excluirPessoa(id).subscribe({
           next: () => {
-            Swal.fire("Excluído!", "A pessoa foi excluída com sucesso.", "success");
+            Swal.fire({
+              title: "Excluído!",
+              text: "A pessoa foi excluída com sucesso.",
+              icon: "success",
+              background: '#333',
+              color: '#fff'
+            });
             this.carregarPessoas();
           },
           error: (err) => {
-            Swal.fire("Erro!", "Erro ao excluir pessoa: " + err.message, "error");
+            Swal.fire({
+              title: "Erro!",
+              text: "Erro ao excluir pessoa: " + err.message,
+              icon: "error",
+              background: '#333',
+              color: '#fff'
+            });
           }
         });
       }
