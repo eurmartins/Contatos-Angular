@@ -1,27 +1,70 @@
-# AngularAvMinsait
+# Contatos Angular 📞
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Este projeto é um desafio técnico para avaliação de habilidades em Angular 16. A aplicação permite listar, cadastrar, editar e excluir pessoas, seguindo boas práticas e padrões recomendados.
 
-## Development server
+## 🚀 Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular 16** - Framework principal para desenvolvimento frontend
+- **TypeScript** - Para tipagem estática e melhor estruturação do código
+- **Bootstrap/Tailwind** *(se aplicável)* - Para estilização da aplicação
+- **API ViaCEP** - Para consulta automática de endereços pelo CEP
 
-## Code scaffolding
+## 📌 Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+✔️ **Listagem de Pessoas**  
+- Exibe uma tabela com **ID, Nome, Endereço, CEP, UF, Ativo**  
+- Exibe números de celular  
+- Inclui botões para **editar** e **excluir**  
 
-## Build
+✔️ **Cadastro de Pessoas**  
+- Campos obrigatórios: **Nome, CEP, Endereço, Cidade e UF**  
+- Validação dos campos (tamanho e obrigatoriedade)  
+- Consulta automática do endereço via API do [ViaCEP](https://viacep.com.br)  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+✔️ **Edição de Pessoas**  
+- Permite alterar os dados cadastrados  
+- Mantém as mesmas validações da tela de cadastro  
 
-## Running unit tests
+✔️ **Exclusão de Pessoas**  
+- Confirmação antes da remoção definitiva  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Como Executar o Projeto
 
-## Running end-to-end tests
+### 1️⃣ Clonar o repositório  
+```bash
+git clone https://github.com/eurmartins/Contatos-Angular.git
+cd Contatos-Angular
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 2️⃣ Instalar as dependências  
+```bash
+npm install
+```
 
-## Further help
+### 3️⃣ Iniciar o servidor de desenvolvimento  
+```bash
+ng serve
+```
+Acesse [http://localhost:4200](http://localhost:4200) no navegador.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🎯 Estrutura do Projeto
+
+```
+📂 src
+ ┣ 📂 app
+ ┃ ┣ 📂 components  # Componentes reutilizáveis
+ ┃ ┣ 📂 pages       # Páginas principais do projeto
+ ┃ ┣ 📂 services    # Serviços de integração com API
+ ┃ ┣ 📂 models      # Definição de interfaces/types
+ ┃ ┗ 📜 app.module.ts  # Configuração principal do Angular
+```
+
+## 🎥 Demonstração *(opcional)*
+
+
+
+## 📝 Considerações Finais
+
+Este projeto foi desenvolvido seguindo boas práticas, com código modular e reutilizável. As diretrizes do desafio foram atendidas, garantindo uma aplicação funcional e bem estruturada.
+
+📩 **Contato:** [Seu Email ou LinkedIn]
