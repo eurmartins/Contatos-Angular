@@ -1,13 +1,16 @@
-# Contatos Angular 📞
+# Contatos Angular(Teste Técnico Minsait) 📞
 
 Este projeto é um desafio técnico para avaliação de habilidades em Angular 16. A aplicação permite listar, cadastrar, editar e excluir pessoas, seguindo boas práticas e padrões recomendados.
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Angular 16** - Framework principal para desenvolvimento frontend
-- **TypeScript** - Para tipagem estática e melhor estruturação do código
-- **Bootstrap/Tailwind** *(se aplicável)* - Para estilização da aplicação
-- **API ViaCEP** - Para consulta automática de endereços pelo CEP
+- **Angular 16** - Framework principal para desenvolvimento frontend.
+- **TypeScript** - Para tipagem estática e melhor estruturação do código.
+- **Bootstrap** - Para estilização da aplicação.
+- **API ViaCEP** - Para consulta automática de endereços pelo CEP.
+- **Jasmine** - Testes Unitários para Services.
+
+
 
 ## 🎥 Demonstração *(opcional)*
 
@@ -15,44 +18,51 @@ Este projeto é um desafio técnico para avaliação de habilidades em Angular 1
 https://github.com/user-attachments/assets/61956736-d7ba-46d1-a1f1-a5791ec1c91d
 
 
- 
 ## 📌 Funcionalidades
 
-✔️ **Listagem de Pessoas**  
-- Exibe uma tabela com **ID, Nome, Endereço, CEP, UF, Ativo**  
-- Exibe números de celular  
-- Inclui botões para **editar** e **excluir**  
+✔️ **Gerenciamento de Pessoas**  
+- Cadastrar pessoas com a chamada na API(Back-end) e a API gratuita(ViaCep). 
+- Editar pessoa com a chamada na API(Back-end).  
+- Listar Pessoas com a chamada na API(Back-end).  
 
-✔️ **Cadastro de Pessoas**  
-- Campos obrigatórios: **Nome, CEP, Endereço, Cidade e UF**  
-- Validação dos campos (tamanho e obrigatoriedade)  
-- Consulta automática do endereço via API do [ViaCEP](https://viacep.com.br)  
-
-✔️ **Edição de Pessoas**  
-- Permite alterar os dados cadastrados  
-- Mantém as mesmas validações da tela de cadastro  
-
-✔️ **Exclusão de Pessoas**  
-- Confirmação antes da remoção definitiva  
+✔️ **Gerenciamento de Contatos**  
+- Cadastrar contatos com a chamada na API(Back-end).
+- Editar contato com a chamada na API(Back-end). 
+- Listar contatos vinculado a pessoas cadastradas com a chamada de API(Back-end).  
+ 
 
 ## 🛠️ Como Executar o Projeto
 
-### 1️⃣ Clonar o repositório  
+### 1. Instação do Node 18 LTS.
+
+```
+Link: https://nodejs.org/pt/blog/release/v18.12.0
+```
+
+
+### 2. Clonar o repositório  
 ```bash
 git clone https://github.com/eurmartins/Contatos-Angular.git
 cd Contatos-Angular
 ```
 
-### 2️⃣ Instalar as dependências  
+### 3. Instalar Angular 16
 ```bash
-npm install
+npm install -g @angular/cli@16
 ```
 
-### 3️⃣ Iniciar o servidor de desenvolvimento  
+### 4. Iniciar o servidor de desenvolvimento  
 ```bash
 ng serve
 ```
 Acesse [http://localhost:4200](http://localhost:4200) no navegador.
+
+### 5. Realizar testes
+
+```
+ng test
+```
+
 
 ## 🎯 Estrutura do Projeto
 
@@ -66,8 +76,9 @@ Acesse [http://localhost:4200](http://localhost:4200) no navegador.
  ┃ ┗ 📜 app.module.ts  # Configuração principal do Angular
 ```
 
-## 📝 Considerações Finais
+📩 **Contato:** 
 
-Este projeto foi desenvolvido seguindo boas práticas, com código modular e reutilizável. As diretrizes do desafio foram atendidas, garantindo uma aplicação funcional e bem estruturada.
+ Email: victormartinssantos.work@gmail.com
+ 
+ Linkedin: https://www.linkedin.com/in/victormartinssantos/
 
-📩 **Contato:** [Seu Email ou LinkedIn]
