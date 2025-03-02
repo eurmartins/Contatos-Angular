@@ -1,6 +1,6 @@
 # Contatos Angular(Teste Técnico Minsait) 📞
 
-Este projeto é um desafio técnico para avaliação de habilidades em Angular 16. A aplicação permite listar, cadastrar, editar e excluir pessoas, seguindo boas práticas e padrões recomendados.
+Este projeto é um desafio técnico para avaliação de habilidades em Angular 16. A aplicação permite listar, cadastrar, editar e excluir pessoas e contatos, seguindo boas práticas e padrões recomendados.
 
 ## 🚀 Tecnologias Utilizadas
 
