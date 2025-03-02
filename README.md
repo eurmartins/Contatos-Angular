@@ -15,7 +15,9 @@ Este projeto é um desafio técnico para avaliação de habilidades em Angular 1
 ## 🎥 Demonstração
 
 
-https://github.com/user-attachments/assets/61956736-d7ba-46d1-a1f1-a5791ec1c91d
+
+https://github.com/user-attachments/assets/001e86a1-2247-4be4-915a-bde9299092ba
+
 
 
 ## 📌 Funcionalidades
