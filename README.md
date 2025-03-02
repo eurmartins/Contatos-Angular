@@ -9,6 +9,13 @@ Este projeto é um desafio técnico para avaliação de habilidades em Angular 1
 - **Bootstrap/Tailwind** *(se aplicável)* - Para estilização da aplicação
 - **API ViaCEP** - Para consulta automática de endereços pelo CEP
 
+## 🎥 Demonstração *(opcional)*
+
+
+https://github.com/user-attachments/assets/61956736-d7ba-46d1-a1f1-a5791ec1c91d
+
+
+ 
 ## 📌 Funcionalidades
 
 ✔️ **Listagem de Pessoas**  
@@ -58,10 +65,6 @@ Acesse [http://localhost:4200](http://localhost:4200) no navegador.
  ┃ ┣ 📂 models      # Definição de interfaces/types
  ┃ ┗ 📜 app.module.ts  # Configuração principal do Angular
 ```
-
-## 🎥 Demonstração *(opcional)*
-
-
 
 ## 📝 Considerações Finais
 
